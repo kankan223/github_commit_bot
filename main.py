@@ -1,12 +1,12 @@
 import os
 from datetime import datetime
-# from pathlib import Path
+from pathlib import Path
 from dotenv import load_dotenv
 
 load_dotenv()
 
 now = datetime.now()
-path = os.getenv("repo_path")
+path = Path(os.getenv("repo_path"))
 
 os.chdir(path)
 
